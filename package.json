@@ -1,10 +1,14 @@
 {
   "name": "vime-oauth",
   "description": "Библиотека для работы с OAUTH-авторизацией на VimeWorld",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "1.0.5",
+  "type": "module",
+  "module": "./dist/index.js",
+  "main": "./cjs/index.js",
   "scripts": {
-    "build": "tsc"
+    "build": "npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc -p tsconfig.build.json",
+    "build:cjs": "tsc -p tsconfig.build.cjs.json && echo {\"type\":\"commonjs\"} > cjs/package.json"
   },
   "keywords": [
     "vime",
@@ -27,5 +31,11 @@
   },
   "bugs": {
     "url": "https://github.com/VimeWorld-Hub/vime-oauth/issues"
-  }
+  },
+  "files": [
+    "src",
+    "dist",
+    "cjs",
+    "README.md"
+  ]
 }

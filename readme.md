@@ -9,7 +9,7 @@ npm i vime-oauth
 ## Пример использования
 
 ```typescript
-import {VimeWorldOAuthApi} from "./api";
+import {VimeWorldOAuthApi} from "vime-oauth";
 
 async function start() {
     const client = new VimeWorldOAuthApi({
