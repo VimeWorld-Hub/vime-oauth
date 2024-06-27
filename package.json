@@ -1,7 +1,7 @@
 {
   "name": "vime-oauth",
   "description": "Библиотека для работы с OAUTH-авторизацией на VimeWorld",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "type": "module",
   "module": "./dist/index.js",
   "main": "./cjs/index.js",
