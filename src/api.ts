@@ -32,9 +32,9 @@ export class VimeWorldOAuthApi {
     }
 
     /** Сформировать ссылку для авторизации с помощью личного кабинета */
-    generateAuthUrl(responseType = "code") {
+    generateAuthUrl(query = "", responseType = "code") {
         return `${this.options.siteEndpoint}?response_type=${responseType}`
-            + `&client_id=${this.options.client.id}&redirect_uri=${this.options.client.redirectUri}`
+            + `&client_id=${this.options.client.id}&redirect_uri=${this.options.client.redirectUri}&query=${query}`
     }
 
     /** Получить информацию об игроке по Bearer токену */
